@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funções ,arrow, function</title>
+
+</head>
+<body>
+
+
+
+
+
+
+
+  <script>
+  /*
+  let quadrado = function(x = 5) {
+    // ira retornar o quadrado do parametro passado
+    return x * x
+   }
+   */
+
+/*
+   //essa notação é equivalente a de cima
+   //arrow function  (=>)
+   let quadrado = (x) => {
+    return x * x
+
+   }
+   */
+
+   /*
+   //caso receba apenas um parametro posso omitir o paranteses
+
+   let quadrado = x  => {
+    return x * x
+
+   }
+*/
+
+
+
+//resumo de cima
+/*
+   let quadrado = x => x * x //return implicito
+
+   document.write(quadrado(4))
+   */
+
+   //verificar se numero é par ou impar
+
+   //criar variavel e atribuir a uma função
+
+
+   /*
+   let parOuImpar = function(numero) {
+       
+       // let calculo = numero % 2
+        if(numero % 2 === 0){
+        return 'par'
+     }  else {
+    return 'impar'
+
+     }
+   }
+
+   document.write(parOuImpar(6) , '<br>')
+  */
+
+
+  /*
+    //essa notação é equivalente a de cima
+  let parOuImpar = numero => {
+    if(numero % 2 === 0) {
+      return 'par'
+    }else {
+      return 'impar'
+    }
+  }
+
+  document.write(parOuImpar(9))
+*/
+
+
+//arrow function, melhora a verbosidade
+//funcoes anonimas
+let parOuImpar = numero => numero % 2 === 0 ? 'par' : 'impar'  // return inplicito
+
+document.write(parOuImpar(155))
+
+
+
+
+
+
+
+
+   
+
+
+
+  </script>
+  
+</body>
+</html>

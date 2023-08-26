@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pradigma de Orientação a Objetos</title>
+
+</head>
+<body>
+
+  <h1>Introdução a Orientação a Objetos </h1>
+
+     <h3>Procedural/Estruturado/imperativo</h3>
+     <ul>
+      <li>funcional</li>
+      <li>Lógico</li>
+     </ul>
+
+     <h3>Orientado a Objeto</h3>
+
+     <ul>
+      <li>Concorrente</li>
+      <li>Reativo</li>
+     </ul>
+
+
+
+
+
+  <script>
+
+  //procedural
+
+  let a = 10
+  let b = 7
+  let operador = 'mult'
+
+  function calcular(a, b, operador) {
+    if(operador === 'mult') {
+      console.log(a * b)
+    }
+  }
+
+  calcular(a, b, operador)
+
+
+
+
+  //orintado a Objetos
+  //estrutura de dados com comportamentos
+
+  class Calculadora {
+
+  constructor(){
+      this.a = 10
+      this.b = 7
+      this.operador = 'mult'
+    }
+
+    calcular() {
+      if(this.operador === 'mult') {
+        console.log(this.a * this.b)
+
+      }
+    }
+
+  }
+
+  calculadora = new Calculadora()
+  calculadora.calcular()
+ 
+
+
+
+
+
+
+  </script>
+  
+</body>
+</html>
