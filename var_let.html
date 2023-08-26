@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escocopo - Var e Let</title>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+  <script>
+    //3 escopos: global, função e de bloco
+
+
+    //variavel declarada no escopo global esta diponivel para todos
+    var serie = 'Friends'
+
+    function x() {
+      //escopo de função
+      var serie = 'Game Of Thrones'
+      console.log('Função:' + serie)
+     
+      //bloco da função
+      if(true) {
+        console.log('Bloco dentro da função:' + serie)
+
+      }
+    }
+    
+    //chamar função
+    x()
+
+
+
+    //escopo global
+    if(true) {
+      console.log('Global: ' + serie)
+
+    }
+
+  </script>
+  
+</body>
+</html>

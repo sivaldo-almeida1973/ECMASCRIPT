@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escocopo - Var e Let</title>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+  <script>
+    //3 escopos: global, função e de bloco
+
+/*
+   
+
+    function x() {
+      //escopo de função
+     
+      console.log('dentro da função:' + serie)
+     
+      //bloco da função
+      if(true) {
+       
+
+      }
+    }
+    
+   
+    
+    //escopo de bloco sofre elevação para o escopo global
+    if(true) {
+      var serie = 'The Wlaking Dead'
+      x()
+      console.log('escopo bloco: ' + serie)
+
+    }
+
+
+    //escopo global
+    console.log('Global:' + serie)
+    */
+
+
+    //usando o let  *****************************
+
+    if(true) {
+      let serie = 'Friends'
+      console.log('Escopo de bloco ' + serie)
+    }
+
+    // seu tentar acessar fora do bloco dará um erro, let preserva o escopo onde a variavel foi criada, essa é a diferença entre let e var
+
+    console.log(serie)
+
+
+
+
+
+  </script>
+  
+</body>
+</html>
