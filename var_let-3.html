@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escocopo - Var e Let</title>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+  <script>
+  //ira imprimir o que esta dentro do bloco, pois sobescreve o que esta no global
+
+/*
+  //escopo global
+    var serie = 'Friends'
+
+    {
+      //escopo de bloco
+      var serie = 'The Walking Dead'
+      console.log('dentro do bloco: ' + serie)
+    }
+
+    console.log('Fora do bloco:' + serie)
+*/
+
+
+
+//vamos usar o mesmo cenario com Operador Let
+//Let preserva o contexto , evita a elevação para o bloco anterior
+
+     let serie = 'Friends'
+
+     {
+      let serie = 'The Walking Dead'
+      console.log('Dentro do bloco' + serie)
+     }
+     
+     console.log('fora do bloco' + serie)
+
+
+
+
+  </script>
+  
+</body>
+</html>
