@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Const</title>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+  <script>
+    //É INDICADO DECLARAR CONST COM LETRAS MAIUSCULAS
+    // NAO PODEMOS ATRIBUIR UM NOVO VALOR
+
+/*/
+      const SERIE = 'FRIENDS'
+     // NAO PODEMOS ATRIBUIR UM NOVO VALOR, DARÁ UM ERROE
+      SERIE = 'THE WALKING DEAD'
+
+      console.log(SERIE)
+*/
+
+     // CONST SERVE PARA VALORES QUE NÃO SERÃO ALTERADOS(SENHA ,LINKS)
+      const SERIE = 'Friends' 
+
+      function x() {
+        const SERIE = 'The Walking Dead'
+        console.log('DENTRO DO ESCOPO DA FUNÇÃO', SERIE)
+      }
+      x()
+
+      console.log('ESCOPO GLOBAL' + SERIE)
+
+  </script>
+  
+</body>
+</html>
