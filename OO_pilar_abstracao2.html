@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pradigma de Orientação a Objetos</title>
+
+
+</head>
+<body>
+
+
+
+
+  <script>
+
+//um software de marcenaria
+//cadeira e sofá
+
+//Paradigma Procedural
+
+// cadeira
+
+//escopo global
+/*let qtde_pernas = 4
+let giratoria = false
+let cor = 'azul'*/
+
+/*
+//array de cadeiras
+let cadeiras = Array()
+
+cadeiras[0] = Array()
+cadeiras[0]['qtde_pernas'] = 4
+cadeiras[0]['giratoria'] = false
+cadeiras[0]['cor'] = 'azul'
+
+cadeiras[1] = Array()
+cadeiras[1]['qtde_pernas'] = 1
+cadeiras[1]['giratoria'] = true
+cadeiras[1]['cor'] = 'vermelha'
+
+
+function girar_cadeira(indice) {
+  if(cadeiras[indice]['giratoria'] === true) {
+    console.log('cadeira é giratória!!')
+
+  } else {
+    console.log('cadeira não é giratoria !!')
+
+  }
+
+}
+
+// criar função para adicionar cadeira
+function adicionar_cadeira(qtde_pernas, giratoria, cor) {
+  let cadeira = Array()
+
+  cadeira['qtde_pernas'] = qtde_pernas
+  cadeira['giratoria'] = giratoria
+  cadeira['cor'] = cor
+
+  cadeiras.push(cadeira)
+
+}
+
+adicionar_cadeira(3, false, 'verde')
+console.log(cadeiras)
+
+
+//chamar função
+//girar_cadeira(1)
+
+*/
+
+
+
+
+
+
+//**********************************************************
+//Implementar paradigma orientado a Objetos
+
+// 1º passo criar um modelo do objeto
+
+class Cadeira {
+  //atributos do objeto com( parametros)
+  constructor(qtde_pernas, giratoria, cor) {
+
+    //variaveis inerente ao objeto e (parametros)
+    this.qtde_pernas = qtde_pernas
+    this.giratoria = giratoria
+    this.cor = cor
+  }
+  
+  //adicionar metodos
+  girarCadeira() {
+    if(this.giratoria === true) {
+      console.log('cadeira gira!')
+    }else {
+      console.log('cadeira não gira!')
+    }
+  }
+}
+
+//adicionar cadeiras
+
+//let cadeira = new Cadeira(4, false, 'azul')
+//let cadeira2 = new Cadeira(1, true, 'vermelho')
+//let cadeira3 = new Cadeira(1, true, 'amarelo')
+
+
+let cadeiras = Array()
+
+cadeiras.push(new Cadeira(4, false, 'azul'))
+cadeiras.push(new Cadeira(1, true, 'laranja'))
+cadeiras.push(new Cadeira(1, true, 'amarelo'))
+
+console.log(cadeiras)
+
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+  </script>
+  
+</body>
+</html>

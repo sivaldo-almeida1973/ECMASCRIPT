@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pradigma de Orientação a Objetos</title>
+
+
+</head>
+<body>
+
+  <h1>Paradigma de Orientação a Objetos </h1>
+
+     <h3>Pilar da Abstração (Abstrair)</h3>
+    
+
+     <h3>Orientado a Objeto</h3>
+
+     <ul>
+      <li>Entidade</li>
+      <li>Identidade</li>
+      <li>Caracteristicas (atributos)</li>
+      <li>Ações (metodos)</li>
+     </ul>
+
+     <table border="1">
+      <tr>
+        <th>Entidade</th>
+        <th>Identidade</th>
+        <th>Caracteristicas (atributos)</th>
+        <th>Ações (metodos)</th>
+      </tr>
+      <tr>
+        <td>carro</td>
+        <td>x = new Carro()</td>
+        <td>marca, modelo,cor,qtdPortas</td>
+        <td>ligar, acelerar,freiar, desligar</td>
+      </tr>
+      <tr>
+        <td>Sonho</td>
+        <td>z = new Sonho()</td>
+        <td>tipo,historia, gostaria_sonhar_denovo</td>
+        <td>exibirHistoria</td>
+      </tr>
+      <tr>
+        <td>ContaBancaria</td>
+        <td>y = new ContaBancaria</td>
+        <td>agencia, numeroConta,slado,limite</td>
+        <td>depositar,sacar consultaSaldo</td>
+      </tr>
+     </table>
+
+
+
+
+
+  <script>
+
+ //modelo da entidade/objeto
+// classse não é um objeto, é um modelo que serve para geração de 1 ou  varios objetos se necessario.
+  class ContaBancaria {
+    //caracteristicas/atributos*******************
+    //agencia
+    //numeroConta
+    //saldo
+    //limite
+    //metodo constructor() construcao de um objeto, usa a classe para isntanciar se tranformando em um objeto
+    //pra definir os atibutos usamos o metodo (this)
+    constructor() {
+
+      this.agencia = 1075
+      this.numeroConta = 8351125
+      this.saldo = 50
+      this.limite = 450
+
+
+
+    }
+   //acoes/metodos*****************************
+    depositar(valorDeposito) {
+      this.saldo += valorDeposito
+
+    }
+    sacar(valorSaque) {
+
+      this.saldo -= valorSaque
+    }
+    consultarSaldo() {
+      return this.saldo
+
+
+    }
+  //tudo issso acima é apenas a abstração
+  }
+
+
+  //agora vamos transformar a classe em uma entidade /instancia / objeto
+  //duas contas diferentes 
+  // operador new()
+  let x = new ContaBancaria()
+  let y = new ContaBancaria()
+
+  console.log('O saldo é de R$:', x.consultarSaldo())
+  x.depositar(450)
+  console.log(x.consultarSaldo())
+  x.sacar(200)
+  console.log('Saldo da conta x R$:' ,x.consultarSaldo())
+
+
+  console.log('Saldo da conta y R$:', y.consultarSaldo())
+
+
+
+ 
+
+
+
+
+
+
+  </script>
+  
+</body>
+</html>
