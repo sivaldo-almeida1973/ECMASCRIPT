@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pradigma de Orientação a Objetos</title>
+
+
+</head>
+<body>
+
+
+
+
+  <script>
+      //herança (super class= class pai) e (subclass = class filhos)
+    class Animal {
+      constructor() {
+        this.cor = ''
+        this.tamanho  = null
+        this.peso = null
+      }
+
+      dormir() {
+        console.log('Dormir')
+      }
+    }
+
+    class Cachorro extends Animal {
+      constructor(){
+        //atributos
+       super()
+        this.orelhas = 'Grandes e caidas'
+
+      }
+
+      //metodos
+      correr() {
+        console.log('Correr');
+
+      }
+      rosnar() {
+        console.log('Rosnar');
+
+      }
+
+    }
+
+    class Passaro extends Animal {
+      //atributos
+     constructor(){
+      super()
+      this.bico = 'Curto'
+
+
+     }
+     //metodos
+     voar() {
+      console.log('Voar')
+
+     }
+    }
+
+    class Papagaio extends Passaro {
+      constructor() {
+        super()
+        this.sabeFalar = true
+      }
+      falar() {
+        console.log('Falar')
+      }
+    }
+
+    
+    
+    //criar uma variavel
+    let cachorro = new Cachorro()
+    let passaro  = new Passaro()
+    let papagaio  = new Papagaio()
+
+    /*
+    cachorro.dormir()
+    passaro.dormir()
+    papagaio.falar()
+    papagaio.dormir()
+    papagaio.voar()
+*/
+
+console.log(cachorro)
+console.log(passaro)
+console.log(papagaio)
+
+  
+   
+
+
+
+
+  </script>
+  
+</body>
+</html>
