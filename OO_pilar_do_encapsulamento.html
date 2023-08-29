@@ -87,42 +87,37 @@ console.log(cadeiras)
 
 // 1º passo criar um modelo do objeto
 
-class Cadeira {
-  //atributos do objeto com( parametros)
-  constructor(qtde_pernas, giratoria, cor) {
-
-    //variaveis inerente ao objeto e (parametros)
-    this.qtde_pernas = qtde_pernas
-    this.giratoria = giratoria
-    this.cor = cor
+//modelo
+class Tv {
+  constructor() {
+    //atributos           em formato de array()
+    this._relacaoCanais = Array(2,4,5,7,10)
+    this._canalAtivo = 5
+    this._volume = 5
   }
   
-  //adicionar metodos
-  girarCadeira() {
-    if(this.giratoria === true) {
-      console.log('cadeira gira!')
-    }else {
-      console.log('cadeira não gira!')
+  //metodos getters (recupera e seta atributos privados)
+  get canalAtivo() {
+    return this._canalAtivo
+  }
+//a convenção sugere o uso do metodo set, defiir uma função com o mesmo 
+//nome do atributo
+  set canalAtivo(canal) {
+    //controle
+    if(this._relacaoCanais.indexOf(canal) !== -1) {
+      this._canalAtivo = canal
+
     }
+ 
   }
 }
 
-//adicionar cadeiras
+//instancia o variavel de tv(objeto)
+let tv = new Tv()
 
-//let cadeira = new Cadeira(4, false, 'azul')
-//let cadeira2 = new Cadeira(1, true, 'vermelho')
-//let cadeira3 = new Cadeira(1, true, 'amarelo')
-
-
-let cadeiras = Array()
-
-cadeiras.push(new Cadeira(4, false, 'azul'))
-cadeiras.push(new Cadeira(1, true, 'laranja'))
-cadeiras.push(new Cadeira(1, true, 'amarelo'))
-
-console.log(cadeiras)
-
-
+//acessar atraves de uma pseudo variavel 
+tv.canalAtivo = 7
+console.log(tv.canalAtivo)
 
  
 
