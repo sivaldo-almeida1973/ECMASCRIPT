@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funções Factory</title>
+
+
+</head>
+<body>
+  
+
+
+
+
+  <script>
+
+    //coleção de bicicletas
+    //primeiro objeto
+    let Bicicleta1 = {
+      cor: 'Branca',
+      marcha: 'unica',
+      aro: 12,
+      //metodo pedalar
+      pedalar() {console.lo('Metodo pedalar executado!')}
+    }
+
+    let Bicicleta2 = {
+      cor: 'Vermelha',
+      marcha: '18',
+      aro: 26,
+      //metodo pedalar
+      pedalar() {console.lo('Metodo pedalar executado!')}
+    }
+
+    console.log(Bicicleta1)
+    console.log(Bicicleta2)
+   
+
+    
+    //criar uma nova variavel, que recebe uma função================
+    //criar uma fabrica para automatizar
+    //logica, riquisição http, resposta http
+    let BicicletaFactory = function(cor, marcha, aro) {
+      return {
+        cor,
+        marcha,
+        aro,
+        pedalar() { console.log('Metodo pedalar executado!')}
+      }
+    }
+
+    //criar um novo objeto
+
+    let Bicicleta3 = BicicletaFactory('Amarela', '18', 26)
+    console.log(Bicicleta3)
+
+    let Bicicleta4 = BicicletaFactory('Azul', '22', 36)
+    console.log(Bicicleta4)
+
+    //console.log(`Cor: ${Bicicleta3.cor}`)
+    //  Bicicleta3.pedalar()
+
+
+    
+
+  </script>
+  
+</body>
+</html>
