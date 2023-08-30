@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objeto literal</title>
+
+
+</head>
+<body>
+
+
+
+
+
+  <script>
+
+    let pessoa = {
+      nome: 'Maria',
+      idade: 65
+    }
+
+    console.log(pessoa)
+
+    //---------------------------------
+   //incluir outro atributo
+
+    pessoa.sexo = 'Feminino'
+
+    console.log(pessoa)
+
+    //incluir uma função
+
+    pessoa.dizerOi = () => console.log('Olá, tudo bem?')
+
+    //chamar função
+    pessoa.dizerOi()
+  
+
+   
+
+  </script>
+  
+</body>
+</html>
