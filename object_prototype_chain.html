@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prototype</title>
+
+
+</head>
+<body>
+  
+
+
+
+
+  <script>
+
+    //todos filhos de object.potrotype================
+    //objeto literal por ser mas enchuto, menos verboso
+    // vamos criar uma variavel que ira receber um objeto {}
+
+    Object.prototype.attr50 = 'z' // cuidado ,esta criando um metdo global
+
+    let animal = {attr1: 'a'}
+    let vertebrado = { __proto__: animal ,attr2: 'b'}
+    let ave = { __proto__: vertebrado, attr3: 'c', attr2: 'x'}
+
+
+    console.log(ave.attr3 ,ave.attr2, ave.attr1, ave.attr50)
+  
+  </script>
+  
+</body>
+</html>
