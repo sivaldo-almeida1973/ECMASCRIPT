@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spread/rest</title>
+
+
+</head>
+<body>
+  
+
+
+
+
+  <script>
+
+
+    //contexto rest(juntar os dados)
+
+    function soma(...param) {
+      let resultado = 0
+
+     // console.log(param)
+                   //valor
+      param.forEach(v => resultado += v)
+
+      return resultado
+
+
+    }
+
+   console.log( soma(3,4,5,6,7, 9 ,9 ,8 ,6))
+
+
+   //outro exemplo
+
+   function multiplicacao(m, ...p) {
+   // console.log(m)
+    let resultado = 0
+   // console.log(p)
+
+    p.forEach(v => resultado += m * v)
+
+    return resultado
+
+   }
+   //chamar a funcao multiplcador
+  console.log( multiplicacao(3,4,5,6,49,8))
+
+
+
+   
+  </script>
+  
+</body>
+</html>
