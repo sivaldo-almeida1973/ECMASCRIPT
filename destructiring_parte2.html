@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destructuring- Desestruturação</title>
+
+
+</head>
+<body>
+  
+
+
+
+
+  <script>
+
+    //token
+    // array => []
+    //objeto => {}
+
+    //variavel produto, 
+    //atribuicao de objetos a outros objetos
+    let produto = {
+      descricao: 'Notbook',
+      preco: 1800 ,
+      detalhes: {   //composicao //tem um detalhe
+        fabricante: 'abc',
+        modelo: 'xyz'
+
+      }
+    }
+    //token
+    //let {descricao, preco} = produto
+    //console.log(descricao, preco)
+
+    //trocar o nome por letra
+    //let {descricao: d , preco: p} = produto
+    //console.log(d, p)
+
+//tentar extrair uma variavel que não existe
+    //let {descricao: d , preco: p , desconto=5} = produto
+    //console.log(d, p, desconto)
+    
+ //etrair objetos pertencentes ao objeto principal
+  let{ detalhes: {fabricante, modelo}} = produto
+  console.log(fabricante, modelo)
+
+
+   
+  </script>
+  
+</body>
+</html>
