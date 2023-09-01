@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destructuring- Desestruturação</title>
+
+
+</head>
+<body>
+  
+
+
+
+
+  <script>
+
+/*
+    let frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamão']
+
+    let a = frutas[0]
+    let b = frutas[1]
+    let c = frutas[2]
+
+
+    console.log(a,b,c)
+*/
+
+    //Destructuring
+    //array frutas
+
+    let frutas = ['Abacaxi', 'Uva', 'Pera', 'Mamão']
+
+    //let [a, b, ,c] = frutas  //pular indice
+    let [a, b, c, d, e='banana'] = frutas  //usar parametros default
+  
+
+   // console.log(a, b,c,d ,e)
+
+   let coisas = [['Abacaxi', 'uva', 'pera','mamão'], ['josé', 'maria']]
+
+   let [[ , , n3],  [,n2] ] = coisas
+
+   console.log(n3, n2)
+
+
+
+
+   
+  </script>
+  
+</body>
+</html>
