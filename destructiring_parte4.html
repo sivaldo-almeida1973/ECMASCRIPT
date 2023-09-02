@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destructuring- Desestruturação</title>
+
+
+</head>
+<body>
+  
+
+
+
+
+  <script>
+    //array
+    //desestruturar e juntar 
+    /*
+    let arr = [10,20,30,40]
+
+    let [a , ...resto] = arr  //spread ...
+
+    console.log(a)
+    console.log(resto)
+
+    */
+
+    //mesma coisa para objeto
+    //vamos criar uma variavel que recebe um objeto literal
+
+    let obj = {
+      //objetos/ atributos
+      a: 10 , b: 20 , c: 30, d:20
+    }
+
+    //desestruturar
+    let { a, ...z} = obj  //usamos opreador rest...
+
+    console.log(a)
+    console.log(z)
+
+
+   
+  </script>
+  
+</body>
+</html>
