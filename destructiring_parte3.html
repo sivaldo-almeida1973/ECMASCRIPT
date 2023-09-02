@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destructuring- Desestruturação</title>
+
+
+</head>
+<body>
+  
+
+
+
+
+  <script>
+
+    //array
+
+    /*
+    let arr = [10,20,30,40]
+
+    function teste([a, b, , c, d=100]) {  //pular parametros , //valor default
+      console.log(a, b, c, d)
+
+
+    }
+    // estamos encaminhada os parametros para o array de forma isolada
+    //teste(arr[0], arr[1])
+
+    teste(arr)
+
+    */
+
+    //objeto
+  /*
+    let obj = {
+      a:10,
+      b:20,
+      c:30,
+      d:40
+    }
+   
+    function teste(a, b) {
+      console.log(a, b)
+
+
+    }
+    //passa valores isolados ,passa o objeto
+
+    teste(obj.a , obj.b)
+*/
+//***************************************
+//objeto
+// aplicar a desestruturação nesse contexto
+
+    let obj = {
+      a:10,
+      b:20,
+      c:30,
+      d:40
+    }
+   //aqui na definicao dos parametros da funcao vamos desestruturar o objeto
+   //usar a chave que representa o objeto no JS
+
+   // function teste({a, b}) { 
+    function teste({a: x, b, z= 10}) {  // dar apelido para variaveis
+      console.log(x, b, z)   //z valor default
+
+
+    }
+    //ao inves de passar valores isolados ,passa o objeto completo
+    teste(obj)
+   
+  </script>
+  
+</body>
+</html>
