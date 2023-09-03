@@ -55,7 +55,7 @@
         <div class="col-md-2">
           <select class="form-control" id="ano">
             <option value="">Ano</option>
-            <option value="2018">2023</option>
+            <option value="2023">2023</option>
           </select>
         </div>
 
@@ -109,6 +109,32 @@
         </div>
       </div>
     </div>
+
+   <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#erroGravacao">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="erroGravacao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-danger">
+        <h5 class="modal-title" id="exampleModalLabel">Erro de gravação</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span class="aria-hidden">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Existem campos obrigatorios que não foram preenchidos
+      </div>
+      <div class="modal-footer">
+     
+        <button type="button" class="btn btn-primary btn-danger">Voltar e corrigir</button>
+      </div>
+    </div>
+  </div>
+</div>
   </body>	
 
 </html>
