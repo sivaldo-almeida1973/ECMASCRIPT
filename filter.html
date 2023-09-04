@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>filter</title>
+</head>
+<body>
+
+
+  <script>
+    let funcionarios = [{nome: 'Fernanda', cargo: 'Analista de RH',  salario: 3100, status: 'ativo'},{nome: 'Sivaldo', cargo: 'Programador senior',  salario: 9000, status: 'ativo'},{nome: 'Alice', cargo: 'Eng. Software',  salario: 10800, status: 'ativo'},{nome: 'Lucas', cargo: 'Advogado',  salario: 13100, status: 'ativo'},{nome: 'Miguel', cargo: 'Assistente adm',  salario: 2100, status: 'inativo'}]
+
+
+
+
+
+
+
+funcionarios.filter(function(f) {return true
+    
+})
+
+funcionarios.filter(function(f) {return f.salario < 3000
+})
+
+    
+
+
+funcionarios.filter(function(f) {return f.salario > 3000
+}).filter(function(f) { return f.status == 'ativo'
+    
+})
+
+funcionarios.filter(f => f.salario > 3000
+).filter(f => f.status == 'ativo')
+    
+
+
+funcionarios.filter(f => f.salario > 3000
+).filter(f => f.status == 'ativo'
+    
+)
+
+  </script>
+  
+</body>
+</html>

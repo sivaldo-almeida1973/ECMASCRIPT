@@ -74,6 +74,12 @@ class Bd {
     return despesas
 
   }
+  //criar metodo pesquisar
+  //recebe por parametro despesa
+  pesquisar() {
+     console.log(despesa)
+
+  }
 }
 
 let bd = new Bd()
@@ -201,3 +207,21 @@ function carregaListaDespesas() {
 
 }
 
+//criar funcao pesquisarDespesa()
+//ligado a consulta no click sobre o button pesquisar
+
+function pesquisarDespesa() {
+  let ano = document.getElementById('ano').value
+  let mes = document.getElementById('mes').value
+  let dia = document.getElementById('dia').value
+  let tipo = document.getElementById('tipo').value
+  let descricao = document.getElementById('descricao').value
+  let valor = document.getElementById('valor').value
+
+  //criar variavel despesa, e atribui uma nova despesa a ela
+
+  let despesa = new Despesa(ano, mes, dia, tipo, descricao, valor)
+
+  //recuperar uma instancia de bd, passando com parametro despesa
+  bd.pesquisar(despesa)
+}
