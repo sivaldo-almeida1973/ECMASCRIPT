@@ -53,18 +53,19 @@ class Bd {
     let despesas = Array()
 
     let id = localStorage.getItem('id')
+
   //recuperer todas as despesas cadastradas em localStorage
     for(let i = 1; i <= id; i++) {
 
       //recuperar a despesa
       let despesa = JSON.parse(localStorage.getItem(i))
 
-      //verificar se existe a possibilidade de haver índices que foram pulados/removidos 
+      //existe a possibilidade de haver índices que foram pulados/removidos 
       //nestes casos nós vamos pular esses índices
       if(despesa === null) {
         continue
       }
-
+      despesa.id = i
       despesas.push(despesa)
 
     }
@@ -117,8 +118,11 @@ class Bd {
   }
    
    
-  console.log(despesasFiltradas)
+  return despesasFiltradas
+  }
 
+  remover(id) {
+    localStorage.removeItem(id)
   }
 }
 
@@ -189,13 +193,16 @@ function cadastrarDespesa() {
 
 }
 
-function carregaListaDespesas() {
+function carregaListaDespesas(despesas = Array(), filtro = false) {
 
-  let despesas = Array()
+    if(despesas.length == 0 && filtro == false) {
+        despesas = bd.recuperarTodosRegistros()
 
-  despesas = bd.recuperarTodosRegistros()
+    }
 
-  let listaDespesas = document.getElementById('listaDespesas')
+    //selecionando o elemento tbody da tabela
+    let listaDespesas = document.getElementById('listaDespesas')
+    listaDespesas.innerHTML = ''
   
 
  // var listaDespesas = document.getElementById('listaDespesas')
@@ -237,11 +244,30 @@ function carregaListaDespesas() {
 
     linha.insertCell(1).innerHTML = d.tipo
 
-
-
-
     linha.insertCell(2).innerHTML = d.descricao
     linha.insertCell(3).innerHTML = d.valor
+
+    //criar botão de exclusão
+    let btn = document.createElement('button')
+    btn.className = 'btn btn-danger'
+    btn.innerHTML = '<i class="fas fa-times"></i>'
+    btn.id = `id_despesa_${d.id}`
+    btn.onclick = function() {
+      //remover a despesa
+        let id = this.id.replace('id_despesa_', '')
+
+        //alert(id)
+
+        bd.remover(id)
+
+        //atualiza a pagina apos excluir item
+        window.location.reload()
+    
+    }
+    linha.insertCell(4).append(btn)
+
+    console.log(d)
+
 
   })
 
@@ -262,6 +288,10 @@ function pesquisarDespesa() {
 
   let despesa = new Despesa(ano, mes, dia, tipo, descricao, valor)
 
-  //recuperar uma instancia de bd, passando com parametro despesa
-  bd.pesquisar(despesa)
+  let despesas = bd.pesquisar(despesa)
+
+  this.carregaListaDespesas(despesas, true)
+
+  
+  
 }
